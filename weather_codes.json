@@ -1,0 +1,282 @@
+{
+  "0": {
+    "day": {
+      "description": "Klarer Himmel",
+      "image": "☀️"
+    },
+    "night": {
+      "description": "Klarer Himmel",
+      "image": "🌑"
+    }
+  },
+  "1": {
+    "day": {
+      "description": "Hauptsächlich klar",
+      "image": "🌤️"
+    },
+    "night": {
+      "description": "Hauptsächlich klar",
+      "image": "🌤️"
+    }
+  },
+  "2": {
+    "day": {
+      "description": "Teilweise bewölkt",
+      "image": "⛅"
+    },
+    "night": {
+      "description": "Teilweise bewölkt",
+      "image": "⛅"
+    }
+  },
+  "3": {
+    "day": {
+      "description": "Bedeckt",
+      "image": "☁️"
+    },
+    "night": {
+      "description": "Bedeckt",
+      "image": "☁️"
+    }
+  },
+  "45": {
+    "day": {
+      "description": "Nebel",
+      "image": "🌫️"
+    },
+    "night": {
+      "description": "Nebel",
+      "image": "🌫️"
+    }
+  },
+  "48": {
+    "day": {
+      "description": "Ablagernder Reifnebel",
+      "image": "🌫️"
+    },
+    "night": {
+      "description": "Ablagernder Reifnebel",
+      "image": "🌫️"
+    }
+  },
+  "51": {
+    "day": {
+      "description": "Leichter Sprühregen",
+      "image": "🌦️"
+    },
+    "night": {
+      "description": "Leichter Sprühregen",
+      "image": "🌧️"
+    }
+  },
+  "53": {
+    "day": {
+      "description": "Mäßiger Sprühregen",
+      "image": "🌦️"
+    },
+    "night": {
+      "description": "Mäßiger Sprühregen",
+      "image": "🌧️"
+    }
+  },
+  "55": {
+    "day": {
+      "description": "Dichter Sprühregen",
+      "image": "🌦️"
+    },
+    "night": {
+      "description": "Dichter Sprühregen",
+      "image": "🌧️"
+    }
+  },
+  "56": {
+    "day": {
+      "description": "Leichter gefrierender Sprühregen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Leichter gefrierender Sprühregen",
+      "image": "🌧️"
+    }
+  },
+  "57": {
+    "day": {
+      "description": "Dichter gefrierender Sprühregen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Dichter gefrierender Sprühregen",
+      "image": "🌧️"
+    }
+  },
+  "61": {
+    "day": {
+      "description": "Leichter Regen",
+      "image": "🌦️"
+    },
+    "night": {
+      "description": "Leichter Regen",
+      "image": "🌧️"
+    }
+  },
+  "63": {
+    "day": {
+      "description": "Mäßiger Regen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Mäßiger Regen",
+      "image": "🌧️"
+    }
+  },
+  "65": {
+    "day": {
+      "description": "Starker Regen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Starker Regen",
+      "image": "🌧️"
+    }
+  },
+  "66": {
+    "day": {
+      "description": "Leichter gefrierender Regen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Leichter gefrierender Regen",
+      "image": "🌧️"
+    }
+  },
+  "67": {
+    "day": {
+      "description": "Starker gefrierender Regen",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Starker gefrierender Regen",
+      "image": "🌧️"
+    }
+  },
+  "71": {
+    "day": {
+      "description": "Leichter Schneefall",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Leichter Schneefall",
+      "image": "🌨️"
+    }
+  },
+  "73": {
+    "day": {
+      "description": "Mäßiger Schneefall",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Mäßiger Schneefall",
+      "image": "🌨️"
+    }
+  },
+  "75": {
+    "day": {
+      "description": "Starker Schneefall",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Starker Schneefall",
+      "image": "🌨️"
+    }
+  },
+  "77": {
+    "day": {
+      "description": "Schneegriesel",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Schneegriesel",
+      "image": "🌨️"
+    }
+  },
+  "80": {
+    "day": {
+      "description": "Leichte Regenschauer",
+      "image": "🌦️"
+    },
+    "night": {
+      "description": "Leichte Regenschauer",
+      "image": "🌧️"
+    }
+  },
+  "81": {
+    "day": {
+      "description": "Mäßige Regenschauer",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Mäßige Regenschauer",
+      "image": "🌧️"
+    }
+  },
+  "82": {
+    "day": {
+      "description": "Starke Regenschauer",
+      "image": "🌧️"
+    },
+    "night": {
+      "description": "Starke Regenschauer",
+      "image": "🌧️"
+    }
+  },
+  "85": {
+    "day": {
+      "description": "Leichte Schneeschauer",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Leichte Schneeschauer",
+      "image": "🌨️"
+    }
+  },
+  "86": {
+    "day": {
+      "description": "Starke Schneeschauer",
+      "image": "🌨️"
+    },
+    "night": {
+      "description": "Starke Schneeschauer",
+      "image": "🌨️"
+    }
+  },
+  "95": {
+    "day": {
+      "description": "Gewitter",
+      "image": "⛈️"
+    },
+    "night": {
+      "description": "Gewitter",
+      "image": "⛈️"
+    }
+  },
+  "96": {
+    "day": {
+      "description": "Gewitter mit leichtem Hagel",
+      "image": "⛈️"
+    },
+    "night": {
+      "description": "Gewitter mit leichtem Hagel",
+      "image": "⛈️"
+    }
+  },
+  "99": {
+    "day": {
+      "description": "Gewitter mit starkem Hagel",
+      "image": "⛈️"
+    },
+    "night": {
+      "description": "Gewitter mit starkem Hagel",
+      "image": "⛈️"
+    }
+  }
+}

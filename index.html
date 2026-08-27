@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchleiWetter</title>
+</head>
+
+
+
+<body>
+
+    <main>
+
+        <section>
+
+            <div class="search">
+                <input type="text" id="citySearch" placeholder="Suchen...">
+                <button onclick="searchCity(document.getElementById('citySearch').value)">Suchen</button>
+            </div>
+
+            <h1 id="cityName">Schleswig</h1>
+            <div class="location">
+                <p id="country">Deutschland</p>
+                <p>•</p>
+                <time id="time">01.01.2026, 00:00</time>
+            </div>
+            <div class="conditions">
+                <p id="weatherIcon">☀️</p>
+                <p id="temp">0.0°C</p>
+                <p id="weather">Sonnig</p>
+            </div>
+            <div class="otherConditions">
+                <p id="precipitationChance">💧 0%</p>
+                <p id="windSpeed">💨 0km/h</p>
+            </div>
+
+        </section>
+
+        <section>
+            
+        </section>
+
+    </main>
+
+</body>
+
+
+
+<style>
+    body {
+        height: 100vh;
+
+        margin: 0;
+
+        font-family: Arial;
+        color: white;
+
+        background: linear-gradient(180deg, #1e3d75, #a0e7fb);
+        transition: background 2s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        width: fit-content;
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 100%;
+
+        box-sizing: border-box;
+        margin: 10px;
+        padding: 30px;
+
+        background-color: rgba(255, 255, 255, 0.1);
+
+        text-align: center;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        font-size: 17px;
+
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .location {
+
+        display: flex;
+        justify-content: center;
+
+        gap: 10px;
+    }
+    .location p {
+        margin: 0;
+    }
+
+    .conditions {
+        margin-top: 40px;
+    }
+    .conditions p {
+        margin: 7px;
+    }
+
+    .otherConditions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
+
+
+
+<script language="javascript">
+
+    document.getElementById('citySearch').addEventListener("keypress", function (event) {
+
+        if (event.key === "Enter") {
+            searchCity(document.getElementById('citySearch').value);
+        }
+    });
+
+
+    function searchCity(city) {
+
+        if (city) {
+            fetch(
+                `https://geocoding-api.open-meteo.com/v1/search?name=${city}&language=de`
+            )
+                .then(response => response.json())
+                .then(data => {
+
+                    if (!data.results) {
+                        alert(city + " nicht gefunden!");
+                        return;
+                    }
+
+                    document.getElementById('cityName').innerHTML = data.results[0].name;
+                    document.getElementById('country').innerHTML = data.results[0].country;
+
+                    getWeather(data.results[0].latitude, data.results[0].longitude, data.results[0].timezone)
+                    getTime(data.results[0].timezone)
+                });
+        }
+    }
+
+
+    function getTime(timezone) {
+
+        var time = new Date();
+        document.getElementById('time').innerHTML = time.toLocaleString("de-de",
+            { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: timezone }
+        );
+    }
+
+
+    function getWeather(latitude, longitude) {
+
+        fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&timezone=auto&daily=precipitation_probability_max&current=wind_speed_10m,temperature_2m,weather_code,is_day`
+        )
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('temp').innerHTML = data.current.temperature_2m + "°C";
+                document.getElementById('precipitationChance').innerHTML = "🌧️ " + data.daily.precipitation_probability_max[0] + "%";
+                document.getElementById('windSpeed').innerHTML = "💨 " + data.current.wind_speed_10m + "km/h";
+
+                getWeatherDetails(data.current.weather_code, data.current.is_day);
+            });
+    }
+
+
+    function getWeatherDetails(weatherCode, isDay) {
+
+        fetch('./weather_codes.json')
+            .then(response => response.json())
+            .then(data => {
+                switch(isDay) {
+                    case 0:
+                        document.getElementById('weather').innerHTML = data[weatherCode].night.description;
+                        document.getElementById('weatherIcon').innerHTML = data[weatherCode].night.image;
+                        document.body.style.background = "linear-gradient(to bottom, #010E1E, #002746)";
+                        break;
+                    case 1:
+                        document.getElementById('weather').innerHTML = data[weatherCode].day.description;
+                        document.getElementById('weatherIcon').innerHTML = data[weatherCode].day.image;
+                        document.body.style.background = "linear-gradient(to bottom, #1e3d75, #a0e7fb)";
+                        break;
+                }
+            });
+    }
+
+
+    searchCity("Schleswig")
+
+</script>
+
+
+
+</html>
