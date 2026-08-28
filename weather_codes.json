@@ -6,7 +6,7 @@
     },
     "night": {
       "description": "Klarer Himmel",
-      "image": "🌑"
+      "image": "🌕"
     }
   },
   "1": {
@@ -16,7 +16,7 @@
     },
     "night": {
       "description": "Hauptsächlich klar",
-      "image": "🌤️"
+      "image": "🌕"
     }
   },
   "2": {
@@ -26,7 +26,7 @@
     },
     "night": {
       "description": "Teilweise bewölkt",
-      "image": "⛅"
+      "image": "☁️"
     }
   },
   "3": {
@@ -82,7 +82,7 @@
   "55": {
     "day": {
       "description": "Dichter Sprühregen",
-      "image": "🌦️"
+      "image": "🌧️"
     },
     "night": {
       "description": "Dichter Sprühregen",
@@ -92,21 +92,21 @@
   "56": {
     "day": {
       "description": "Leichter gefrierender Sprühregen",
-      "image": "🌧️"
+      "image": "🌨️"
     },
     "night": {
       "description": "Leichter gefrierender Sprühregen",
-      "image": "🌧️"
+      "image": "🌨️"
     }
   },
   "57": {
     "day": {
       "description": "Dichter gefrierender Sprühregen",
-      "image": "🌧️"
+      "image": "🌨️"
     },
     "night": {
       "description": "Dichter gefrierender Sprühregen",
-      "image": "🌧️"
+      "image": "🌨️"
     }
   },
   "61": {
@@ -142,21 +142,21 @@
   "66": {
     "day": {
       "description": "Leichter gefrierender Regen",
-      "image": "🌧️"
+      "image": "🌨️"
     },
     "night": {
       "description": "Leichter gefrierender Regen",
-      "image": "🌧️"
+      "image": "🌨️"
     }
   },
   "67": {
     "day": {
       "description": "Starker gefrierender Regen",
-      "image": "🌧️"
+      "image": "🌨️"
     },
     "night": {
       "description": "Starker gefrierender Regen",
-      "image": "🌧️"
+      "image": "🌨️"
     }
   },
   "71": {
