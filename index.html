@@ -8,7 +8,6 @@
 </head>
 
 
-
 <body>
 
     <main>
@@ -26,29 +25,28 @@
                 <p>•</p>
                 <time id="time">01.01.2026, 00:00</time>
             </div>
+            
             <div class="conditions">
-                <p id="weatherIcon">☀️</p>
+                <p id="weatherIcon">?</p>
                 <p id="temp">0.0°C</p>
-                <p id="weather">Sonnig</p>
+                <p id="weather">Lädt...</p>
             </div>
             <div class="otherConditions">
-                <p id="precipitationChance">💧 0%</p>
+                <p id="precipitationChance">🌧️ 0%</p>
                 <p id="windSpeed">💨 0km/h</p>
             </div>
 
         </section>
 
-        <section>
-            
-        </section>
+        <section></section>
 
     </main>
 
 </body>
 
 
-
 <style>
+
     body {
         height: 100vh;
 
@@ -93,10 +91,8 @@
     }
 
     .location {
-
         display: flex;
         justify-content: center;
-
         gap: 10px;
     }
     .location p {
@@ -114,8 +110,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-</style>
 
+</style>
 
 
 <script language="javascript">
@@ -201,7 +197,5 @@
     searchCity("Schleswig")
 
 </script>
-
-
 
 </html>
