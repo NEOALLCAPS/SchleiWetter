@@ -61,3 +61,20 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.search {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(10px);
+}
+.search input[type="text"] {
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+}
+.search input[type="text"]::placeholder {
+    color: white;
+    padding: 10px;
+}
